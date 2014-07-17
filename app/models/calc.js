@@ -41,5 +41,16 @@ Calc.mean = function(a){
   return sum / a.length;
 };
 
+Calc.stdev = function(a){
+  var sum = Calc.mean(a);
+  var newArr = [];
+  var newSum = 0;
+  for(var i = 0; i < a.length; i++){
+    newArr.push(Math.pow(a[i] - sum, 2));
+  }
+
+  newSum = Calc.mean(newArr);
+  return Math.sqrt(newSum);
+};
 
 module.exports = Calc;

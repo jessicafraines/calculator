@@ -42,6 +42,12 @@ describe('Calc', function(){
         expect(average).to.be.equal(8);
    });
   });
+  describe('.stdev', function(){
+    it('Should give the stdev of the numbers in the array', function(){
+      var numbs = Calc.stdev([2,4,4,4,5,5,7,9]);
+        expect(numbs).to.be.equal(2);
+    });
+  });
 });
 
 
